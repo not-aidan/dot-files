@@ -5,3 +5,4 @@
 cd "$HOME"
 
 sudo apt install << .packages
+cat dconf-settings.ini | dconf load /
