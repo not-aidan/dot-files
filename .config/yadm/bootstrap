@@ -4,5 +4,13 @@
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
 
-sudo apt install << .packages
+
+sudo apt install < .packages
+
+if ! [ -x "$(command -v rustup)" ]
+then
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	rustup component add rust-analyzer
+fi
+
 cat dconf-settings.ini | dconf load /
