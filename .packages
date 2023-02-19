@@ -1,4 +1,5 @@
 neovim
 alacritty
 gh
-libu2f-udev
+libasound2-dev
+libudev-dev
