@@ -112,7 +112,6 @@ require'lspconfig'.jsonls.setup {
 require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-	cmd = {"rustup run stable rust-analyzer"},
     -- Server-specific settings...
     settings = {
       ["rust-analyzer"] = {
@@ -127,6 +126,10 @@ require('lspconfig')['rust_analyzer'].setup{
                     enable = true,
                 },
             },
+			checkOnSave= {
+                allFeatures = true,
+                command = 'clippy',
+			},
             procMacro = {
                 enable = true
             },

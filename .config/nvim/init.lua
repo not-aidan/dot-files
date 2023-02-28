@@ -9,6 +9,7 @@ local core_conf_files = {
   "plugins.lua",
   "options.vim",
   "lsp.lua",
+  --"null-ls.lua",
 }
 
 for _, name in ipairs(core_conf_files) do
