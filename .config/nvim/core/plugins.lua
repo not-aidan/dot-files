@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
 	use 'nvim-lua/plenary.nvim'
 	use 'mfussenegger/nvim-dap'
 
+	-- Terminal
+	use "kassio/neoterm"
+
     -- Autocompletion
 	use("hrsh7th/nvim-cmp")
 	use({
