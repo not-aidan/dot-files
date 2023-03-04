@@ -4,8 +4,14 @@
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
 
+# Fish
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
 
-sudo apt install < .packages
+sudo apt install -y neovim alacritty gh libasound2-dev libudev-dev
+
+# Fish
+chsh -s /usr/bin/fish
 
 if ! [ -x "$(command -v rustup)" ]
 then
