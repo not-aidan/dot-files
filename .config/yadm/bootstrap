@@ -8,7 +8,7 @@ cd "$HOME"
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 
-sudo apt install -y neovim alacritty gh libasound2-dev libudev-dev
+sudo apt install -y neovim alacritty gh libasound2-dev libudev-dev npm nodejs
 
 # Fish
 chsh -s /usr/bin/fish
@@ -18,5 +18,9 @@ then
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 	rustup component add rust-analyzer
 fi
+
+# NPM & Node
+sudo npm install -g n  
+sudo n latest
 
 cat dconf-settings.ini | dconf load /
